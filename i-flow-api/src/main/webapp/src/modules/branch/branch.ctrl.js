@@ -28,8 +28,15 @@ SOFTWARE.
         function (scope,http) {
            
            scope.getBranches = function(){
-               return http.get("https://lambda.us-west-2.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-west-2:344712433810:function:branches/branches?TableName=branch");
-           }
+               var req = {
+ method: 'GET',
+ url: 'https://3krwzdy2qa.execute-api.us-west-2.amazonaws.com/prod/branches?TableName=branch',
+ headers: {
+   'Access-Control-Allow-Origin': '*'
+ }
+};
+               return http(req).then(function(r){console.log(r);});
+           };
            
         }]);
 
