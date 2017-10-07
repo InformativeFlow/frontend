@@ -21,7 +21,29 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<button ng-click="getBranches()">branches</button>
+<h4>GET branches</h4>
+<button ng-click="getBranches()">list</button>
 <ul>
     <li ng-repeat="item in branchesRecords.Items">{{item.name}}</li>
 </ul>
+<hr>
+<h4>POST branch</h4>
+<form>
+    <label for="branchName" >branch name</label>
+    <input name="branchName" type="text" ng-model="branch.name"/>
+    <input type="submit" value="create" ng-click="createBranch(branch)" />    
+</form>
+<hr>
+<h4>PUT branch</h4>
+<form>
+    <label for="branchName" >branch name</label>
+    <input name="branchName" type="text" ng-model="branch.name"/>
+    <input type="submit" value="create" ng-click="updateBranch(branch)" />    
+</form>
+<hr>
+<h4>DELETE branch</h4>
+<form>
+    <label for="branchName" >branch name</label>
+    <input name="branchName" type="text" ng-model="branch.name"/>
+    <input type="submit" value="create" ng-click="deleteBranch(branch)" />    
+</form>
