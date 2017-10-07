@@ -26,15 +26,19 @@ SOFTWARE.
 
     mod.controller('branchCtrl', ['$scope','$http',
         function (scope,http) {
-           
+          
+          var branchAwsApi = 'https://c354kdhd51.execute-api.us-west-2.amazonaws.com/prod/branches';
            scope.getBranches = function(){
                var req = {
- method: 'GET',
- url: 'https://c354kdhd51.execute-api.us-west-2.amazonaws.com/prod/branches?TableName=branch'
-};
-               return http(req).then(function(r){console.log(r);});
-           };
-           
+                   method: 'GET',
+                   url: branchAwsApi+'?TableName=branch'
+               };
+               return http(req).then(function(r){
+                   scope.branchesRecords = r.data;
+                   console.log(r.data);
+               });
+           };        
         }]);
+
 
 })(window.angular);
