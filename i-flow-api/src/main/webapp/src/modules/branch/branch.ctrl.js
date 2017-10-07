@@ -30,10 +30,7 @@ SOFTWARE.
            scope.getBranches = function(){
                var req = {
  method: 'GET',
- url: 'https://3krwzdy2qa.execute-api.us-west-2.amazonaws.com/prod/branches?TableName=branch',
- headers: {
-   'Access-Control-Allow-Origin': '*'
- }
+ url: 'https://c354kdhd51.execute-api.us-west-2.amazonaws.com/prod/branches?TableName=branch'
 };
                return http(req).then(function(r){console.log(r);});
            };
