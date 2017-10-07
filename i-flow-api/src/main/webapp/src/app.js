@@ -24,17 +24,10 @@ SOFTWARE.
 (function (ng) {
     var mod = ng.module('mainApp', [
         //'ngCrudMock',
-        'ngCrud',
         'ui.router',
         'ui.grid',
         'ngCookies',
-        'branchModule',
-        'screenModule',
-        'contentModule',
-        'videoModule',
-        'imageModule',
-        'authModule',
-        'ncy-angular-breadcrumb'
+        'branchModule'
     ]);
 
     mod.constant('baseUrl', 'api');
@@ -43,39 +36,9 @@ SOFTWARE.
             $logProvider.debugEnabled(true);
         }]);
 
-    mod.config(['RestangularProvider', 'baseUrl', function (rp, baseUrl) {
-            rp.setBaseUrl(baseUrl);
-            rp.setRequestInterceptor(function (elem, operation) {
-                if (operation === "remove") {
-                    return null;
-                }
-                return elem;
-            });
-            rp.addResponseInterceptor(function (data, operation, what, url, response) {
-                if (operation === "getList") {
-                    data.totalRecords = parseInt(response.headers("X-Total-Count")) || 1;
-                }
-                return data;
-            });
-        }]);
-
     mod.config(['$urlRouterProvider', function ($urlRouterProvider) {
                 $urlRouterProvider.otherwise('/');
         }]);
-
-    mod.config(['authServiceProvider', 'baseUrl', function (auth, baseUrl) {
-            auth.setValues({
-                apiUrl: baseUrl + '/users/',
-                successState: 'branchList'
-            });
-        }]);
-    mod.config(function($breadcrumbProvider) {
-    $breadcrumbProvider.setOptions({
-      prefixStateName: 'branchList',
-      template: 'bootstrap3'
-      
-    });
-  });
 
     /*
      * When there's an error changing state, ui-router doesn't raise an error

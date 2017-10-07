@@ -1,3 +1,0 @@
-/*
-* controlador para personalizar homepage
-*/

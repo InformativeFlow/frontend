@@ -66,53 +66,11 @@ SOFTWARE.
         <!-- build:js(<%= meta.src %>) scripts/scripts.js -->
         <!-- include: "type": "js", "files": "<%= meta.includeJsFiles %>" -->
         <script src="src/app.js"></script>
-        <script src="src/directives/js/crud.mod.js"></script>
-        <script src="src/directives/js/crud.dir.js"></script>        
-        <script src="src/modules/login/js/auth.mod.js"></script>
-        <script src="src/modules/login/js/auth.ctrl.js"></script>
-        <script src="src/modules/login/js/auth.dir.js"></script>
-        <script src="src/modules/login/js/auth.svc.js"></script>
+              
+        
         <script src="src/modules/branch/branch.mod.js"></script>
-        <script src="src/modules/screen/screen.mod.js"></script>
-        <script src="src/modules/content/content.mod.js"></script>
-        <script src="src/modules/video/video.mod.js"></script>
-        <script src="src/modules/image/image.mod.js"></script>
-        <script src="src/modules/branch/branch.ctrl.js"></script>
-        <script src="src/modules/branch/instance/screen/edit/branch.screen.edit.ctrl.js"></script>
-        <script src="src/modules/branch/instance/screen/list/branch.screen.list.ctrl.js"></script>
-        <script src="src/modules/branch/instance/delete/branch.delete.ctrl.js"></script>
-        <script src="src/modules/branch/instance/detail/branch.detail.ctrl.js"></script>
-        <script src="src/modules/branch/instance/edit/branch.edit.ctrl.js"></script>
-        <script src="src/modules/branch/list/branch.list.ctrl.js"></script>
-        <script src="src/modules/branch/new/branch.new.ctrl.js"></script>
-        <script src="src/modules/screen/screen.ctrl.js"></script>
-        <script src="src/modules/screen/instance/delete/screen.delete.ctrl.js"></script>
-        <script src="src/modules/screen/instance/detail/screen.detail.ctrl.js"></script>
-        <script src="src/modules/screen/instance/edit/screen.edit.ctrl.js"></script>
-        <script src="src/modules/screen/list/screen.list.ctrl.js"></script>
-        <script src="src/modules/screen/new/screen.new.ctrl.js"></script>
-        <script src="src/modules/content/content.ctrl.js"></script>
-        <script src="src/modules/content/instance/video/edit/content.video.edit.ctrl.js"></script>
-        <script src="src/modules/content/instance/video/list/content.video.list.ctrl.js"></script>
-        <script src="src/modules/content/instance/image/edit/content.image.edit.ctrl.js"></script>
-        <script src="src/modules/content/instance/image/list/content.image.list.ctrl.js"></script>
-        <script src="src/modules/content/instance/delete/content.delete.ctrl.js"></script>
-        <script src="src/modules/content/instance/detail/content.detail.ctrl.js"></script>
-        <script src="src/modules/content/instance/edit/content.edit.ctrl.js"></script>
-        <script src="src/modules/content/list/content.list.ctrl.js"></script>
-        <script src="src/modules/content/new/content.new.ctrl.js"></script>
-        <script src="src/modules/video/video.ctrl.js"></script>
-        <script src="src/modules/video/instance/delete/video.delete.ctrl.js"></script>
-        <script src="src/modules/video/instance/detail/video.detail.ctrl.js"></script>
-        <script src="src/modules/video/instance/edit/video.edit.ctrl.js"></script>
-        <script src="src/modules/video/list/video.list.ctrl.js"></script>
-        <script src="src/modules/video/new/video.new.ctrl.js"></script>
-        <script src="src/modules/image/image.ctrl.js"></script>
-        <script src="src/modules/image/instance/delete/image.delete.ctrl.js"></script>
-        <script src="src/modules/image/instance/detail/image.detail.ctrl.js"></script>
-        <script src="src/modules/image/instance/edit/image.edit.ctrl.js"></script>
-        <script src="src/modules/image/list/image.list.ctrl.js"></script>
-        <script src="src/modules/image/new/image.new.ctrl.js"></script>
+       <script src="src/modules/branch/branch.ctrl.js"></script>
+       
         <!-- /include -->
         <!-- endbuild -->
 
@@ -136,13 +94,11 @@ SOFTWARE.
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="main-bar">
                             <ul class="nav navbar-nav">
-                                <li if-permission name='branchs'><a ui-sref="branchList({page: 1, limit: 15})">Branch</a></li>
-                                <li if-permission name='screens'><a ui-sref="screenList({page: 1, limit: 15})">Screen</a></li>
-                                <li if-permission name='videos'><a ui-sref="videoList({page: 1, limit: 15})">Video</a></li>
-                                <li if-permission name='images'><a ui-sref="imageList({page: 1, limit: 15})">Image</a></li>
+                                <li ><a ui-sref="branchList({page: 1, limit: 15})">Branch</a></li>
+                               
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
-                                <login-button></login-button>
+                               
                             </ul>
                         </div> <!-- /.navbar-collapse -->
                     </div> <!-- /.container-fluid -->
