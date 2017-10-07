@@ -47,7 +47,7 @@
                 var req = {
                     method: 'POST',
                     url: branchAwsApi,
-                    data: postData
+                    data: JSON.stringify(postData)
                 };
                 return http(req).then(function (r) {
                     console.log(JSON.stringify(r.data));
@@ -60,7 +60,7 @@
                 var req = {
                     method: 'PUT',
                     url: branchAwsApi,
-                    data: putData
+                    data: JSON.stringify(putData)
                 };
                 return http(req).then(function (r) {
                     console.log(JSON.stringify(r.data));
@@ -73,7 +73,7 @@
                 var req = {
                     method: 'DELETE',
                     url: branchAwsApi,
-                    data: deleteData
+                    data: JSON.stringify(deleteData)
                 };
                 return http(req).then(function (r) {
                     console.log(JSON.stringify(r.data));
