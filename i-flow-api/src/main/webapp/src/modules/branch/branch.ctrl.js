@@ -34,8 +34,8 @@ SOFTWARE.
                    url: branchAwsApi+'?TableName=branch'
                };
                return http(req).then(function(r){
-                   scope.branchesRecords = JSON.stringify(r.data);
-                   console.log(JSON.stringify(r.data));
+                   scope.branchesRecords = JSON.stringify(r.data.Items);
+                   console.log(JSON.stringify(r.data.Items));
                });
            };        
         }]);
