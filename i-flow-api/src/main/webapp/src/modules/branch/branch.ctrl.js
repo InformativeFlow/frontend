@@ -28,7 +28,7 @@ SOFTWARE.
         function (scope,http) {
            
            scope.getBranches = function(){
-               return http.get("");
+               return http.get("https://lambda.us-west-2.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-west-2:344712433810:function:branches/branches?TableName=branch");
            }
            
         }]);
