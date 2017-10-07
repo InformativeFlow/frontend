@@ -35,7 +35,7 @@ SOFTWARE.
                };
                return http(req).then(function(r){
                    scope.branchesRecords = JSON.stringify(r.data);
-                   console.log(r.data);
+                   console.log(JSON.stringify(r.data));
                });
            };        
         }]);
