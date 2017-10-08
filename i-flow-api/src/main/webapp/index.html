@@ -74,8 +74,10 @@ SOFTWARE.
        <script src="src/modules/content/content.ctrl.js"></script>
        <script src="src/modules/screen/screen.mod.js" ></script>
        <script src="src/modules/screen/screen.ctrl.js" ></script>
+       <script src="src/modules/video/video.mod.js" ></script>
+       <script src="src/modules/video/video.ctrl.js" ></script>
+       <script src="https://sdk.amazonaws.com/js/aws-sdk-2.130.0.min.js"></script>
        
-        <!-- /include -->
         <!-- endbuild -->
 
     </head>
@@ -101,6 +103,7 @@ SOFTWARE.
                                 <li ><a ui-sref="branchList({page: 1, limit: 15})">Branch</a></li>
                                 <li ><a ui-sref="screenList({page: 1, limit: 15})">Screen</a></li>
                                  <li ><a ui-sref="contentList({page: 1, limit: 15})">Content</a></li>
+                                 <li ><a ui-sref="videoList({page: 1, limit: 15})">Video</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                

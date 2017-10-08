@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="col-md-8">
+    <div class="panel-heading">
+            <h3 class="panel-title">bucket file list</h3>
+          </div>
+    <button class="btn btn-default" ng-click="listBucketObjects()">list</button>
+    <ul>
+        <li ng-repeat="item in records">
+            <h4>Key:</h4><p> 
+                <small> {{item["Key"]}}</small>
+            <h4>LastModified:</h4><p>
+                <small> {{item["LastModified"]}}</small>  
+        
+        </li>
+    </ul>
+</div>
+<hr>
+ <div class="col-md-8">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Upload The File</h3>
+          </div>
+          <div class="panel-body">
+            <input type = "file"  file-model="myFile"/>
+            <hr>
+         <button class="btn btn-default btn-block btn-lg" ng-click = "uploadFile()">upload me</button>
+            </div>            
+            <hr>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="{{ uploadProgress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ uploadProgress }}%;">
+                {{ uploadProgress == 0 ? '' : uploadProgress + '%' }}
+              </div>
+          </div>
+        </div>
+ </div>    
+   <hr>
+ <div class="col-md-8">
+    <div class="panel-heading">
+            <h3 class="panel-title">delete bucket object</h3>
+          </div>
+     <input type="text" ng-model="filename"/>
+     <button class="btn btn-danger" ng-click="deleteBucketObj(filename)">delete</button>
+ </div>

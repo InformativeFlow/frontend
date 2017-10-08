@@ -29,7 +29,8 @@ SOFTWARE.
         'ngCookies',
         'branchModule',
         'screenModule',
-        'contentModule'
+        'contentModule',
+        'videoModule'
     ]);
 
     mod.constant('baseUrl', 'api');
