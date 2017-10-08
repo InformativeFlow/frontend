@@ -86,7 +86,7 @@
                 });
             };
             
-             scope.deleteBranch = function (screen) {
+             scope.deleteScreen = function (screen) {
 
                 var deleteData = {
                     "TableName": "screen", 
