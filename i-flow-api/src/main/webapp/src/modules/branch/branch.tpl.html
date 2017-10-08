@@ -31,6 +31,8 @@ SOFTWARE.
 <form>
     <label for="postName" >branch name</label>
     <input name="postName" type="text" ng-model="post.name"/>
+    <label for="postArea" >area name</label>
+    <input name="postArea" type="text" ng-model="post.area"/>
     <input type="submit" value="create" ng-click="createBranch(post)" />    
 </form>
 <hr>
@@ -38,12 +40,14 @@ SOFTWARE.
 <form>
     <label for="editName" >branch name</label>
     <input name="editName" type="text" ng-model="edit.name"/>
-    <input type="submit" value="create" ng-click="updateBranch(edit)" />    
+    <label for="editArea" >new area name</label>
+    <input name="editArea" type="text" ng-model="edit.area"/>
+    <input type="submit" value="update" ng-click="updateBranch(edit)" />    
 </form>
 <hr>
 <h4>DELETE branch</h4>
 <form>
     <label for="deleteName" >branch name</label>
     <input name="deleteName" type="text" ng-model="del.name"/>
-    <input type="submit" value="create" ng-click="deleteBranch(del)" />    
+    <input type="submit" value="delete" ng-click="deleteBranch(del)" />    
 </form>

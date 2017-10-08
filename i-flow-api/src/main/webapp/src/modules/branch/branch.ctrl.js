@@ -43,7 +43,12 @@
             scope.createBranch = function (branch) {
 
                 var postData = {
-                    "TableName": "branch", "Item": {"name": {"S": branch.name}}};
+                    "TableName": "branch", 
+                    "Item": {
+                        "name": {"S": branch.name},
+                        "area": {"S": branch.area}
+                    }
+                };
                 var req = {
                     method: 'POST',
                     url: branchAwsApi,
@@ -53,10 +58,24 @@
                     console.log(JSON.stringify(r.data));
                 });
             };
-            
+     
             scope.updateBranch = function (branch) {
 
-                var putData = {"TableName": "branch", "Item": {"name": {"S": branch.name}}};
+                var putData = {
+                    "TableName": "branch",
+                    "Key": {
+                        "name": {
+                            "S": branch.name
+                        }
+                    },
+                    "UpdateExpression": "set area=:a",
+                    "ExpressionAttributeValues":{
+                        ":a":{
+                            "S":branch.area
+                        }
+                    },
+                    "ReturnValues":"UPDATED_NEW" 
+                };
                 var req = {
                     method: 'PUT',
                     url: branchAwsApi,
@@ -69,7 +88,12 @@
             
              scope.deleteBranch = function (branch) {
 
-                var deleteData = {"TableName": "branch", "Item": {"name": {"S": branch.name}}};
+                var deleteData = {
+                    "TableName": "branch", 
+                    "Key": {
+                        "name": {"S": branch.name}
+                    }
+                };
                 var req = {
                     method: 'DELETE',
                     url: branchAwsApi,
