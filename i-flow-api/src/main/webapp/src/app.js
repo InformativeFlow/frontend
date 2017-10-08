@@ -27,7 +27,9 @@ SOFTWARE.
         'ui.router',
         'ui.grid',
         'ngCookies',
-        'branchModule'
+        'branchModule',
+        'screenModule',
+        'contentModule'
     ]);
 
     mod.constant('baseUrl', 'api');

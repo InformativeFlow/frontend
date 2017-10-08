@@ -21,37 +21,37 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<h4>GET branches</h4>
-<button ng-click="getBranches()">list</button>
+<h4>GET screens</h4>
+<button ng-click="getScreens()">list</button>
 <ul>
-    <li ng-repeat="item in branchesRecords.Items">
+    <li ng-repeat="item in screensRecords.Items">
         <p>{{item.name}}</p>
         <p>{{item.area}}</p>
     </li>
 </ul>
 <hr>
-<h4>POST branch</h4>
+<h4>POST screen</h4>
 <form>
-    <label for="postName" >branch name</label>
+    <label for="postName" >screen name</label>
     <input name="postName" type="text" ng-model="post.name"/>
     <label for="postArea" >area name</label>
     <input name="postArea" type="text" ng-model="post.area"/>
-    <input type="submit" value="create" ng-click="createBranch(post)" />    
+    <input type="submit" value="create" ng-click="createScreen(post)" />    
 </form>
 <hr>
-<h4>PUT branch</h4>
+<h4>PUT screen</h4>
 <form>
-    <label for="editName" >branch name</label>
+    <label for="editName" >screen name</label>
     <input name="editName" type="text" ng-model="edit.name"/>
     <label for="editArea" >new area name</label>
     <input name="editArea" type="text" ng-model="edit.area"/>
-    <input type="submit" value="update" ng-click="updateBranch(edit)" />    
+    <input type="submit" value="update" ng-click="updateScreen(edit)" />    
 </form>
 <hr>
-<h4>DELETE branch</h4>
+<h4>DELETE screen</h4>
 <form>
-    <label for="deleteName" >branch name</label>
+    <label for="deleteName" >screen name</label>
     <input name="deleteName" type="text" ng-model="del.name"/>
-    <input type="submit" value="delete" ng-click="deleteBranch(del)" />    
+    <input type="submit" value="delete" ng-click="deleteScreen(del)" />    
 </form>
 <hr>
